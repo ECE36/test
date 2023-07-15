@@ -33,19 +33,19 @@ The matrix $A$ above is formed as $[a_{ij}]$;  $M$ is the diagonal matrix of rat
 The following is an annotated list of the routines in the package.
 * milm_mle.m			Main routine
 * Figure3_DoA.simulation.m	Reproduces direction of arrival estimation example found in Figure 3 of the referenced IEEE Signal Processing Letters paper.
-** doa_pue.m			Estimator from phase of the data covariance matrix
-** doa_mle.m			Maximum likelihood estimator from raw IQ data
+  * doa_pue.m			Estimator from phase of the data covariance matrix
+  * doa_mle.m			Maximum likelihood estimator from raw IQ data
 * form_Lambda_basis.m		Computes lattice bases given $A$ and $M$
 * sils_reduction_Q.m		For sphere decoding; redistributed, with modification, from X-C Wang, et al. 
 * sils_search.m			For sphere decoding: redistributed from X-C Wang, et al. 
 * Selected utilities
-** lcms.m			Finds column-wise positive least common multiple of the non-infinity, non-zero elements in a rational matrix.
-** LLLReduce.m			Implementation of lattice reduction algorithm described in  Wubben et al., 2004. 
-** awgn_phase_covariance.m	Constructs the approximate covariance matrix for phase-difference pairs of L complex-valued observation with iid complex-Gaussian noise
-** lenum.m			Find the shortest vector of a lattice using the method by Schnorr & Euchner 1994, as implemented by Christian Chapman 2018.
-** milm_mle_precompute.m	Pre-compute quantities used by milm_mle
-** tril_vec.m			Returns vector of the lower triangular elements of a square matrix.
-** wrapping_error_bounds.m	Computes upper and lower bounds on the probably of incorrectly detecting the integer unknowns, k.
+  * lcms.m			Finds column-wise positive least common multiple of the non-infinity, non-zero elements in a rational matrix.
+  * LLLReduce.m			Implementation of lattice reduction algorithm described in  Wubben et al., 2004. 
+  * awgn_phase_covariance.m	Constructs the approximate covariance matrix for phase-difference pairs of L complex-valued observation with iid complex-Gaussian noise
+  * lenum.m			Find the shortest vector of a lattice using the method by Schnorr & Euchner 1994, as implemented by Christian Chapman 2018.
+  * milm_mle_precompute.m	Pre-compute quantities used by milm_mle
+  * tril_vec.m			Returns vector of the lower triangular elements of a square matrix.
+  * wrapping_error_bounds.m	Computes upper and lower bounds on the probably of incorrectly detecting the integer unknowns, k.
 		
 
 Copyright (c) 2023, David Tucker, Shen Zhao, Lee C. Potter
