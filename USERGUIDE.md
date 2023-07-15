@@ -8,12 +8,10 @@ function [x_hat,k_hat,pre] = milm_mle(Ac,yc,Mc,V,Prec,Ns,pre)
 * Lee C. Potter, Ohio State University (potter.36@osu.edu)
 
 This is the main routine for solving maximum likelihood estimation in mixed integer linear models,
-$$
-y=Ax + Mk + u
-$$
+$$y=Ax + Mk + u$$
 where $y \in \mathbb{R}^m$ is a vector of noisy observations, $x\in\mathbb{R}^n$ are real-valued unknowns, $k \in \mathbb{Z}^m$ are integer-valued unknowns, and $u$ is zero-mean additive noise with inverse covariance matrix given by Prec. The matrix $A$ has full column rank and $M$ is invertible; both $A$ and $M$ are assumed to have rational entries in this code.
 
-The input $V$ is an $n$-by-$n$ real-valued matrix providing a basis for the fundamental parallelotope describing the un-aliased values for $x$.  From $A$ and $M$, a basis $V$ is constructed by the utility routine, form_Lambda_basis.m.
+The input $V$ is an $n \times n$ real-valued matrix providing a basis for the fundamental parallelotope describing the un-aliased values for $x$.  From $A$ and $M$, a basis $V$ is constructed by the utility routine, form_Lambda_basis.m.
 
 Multiple values of $x$ and $k$ providing large likelihood scores are returned by choosing integer-valued input, Ns, greater than 1.
 
@@ -21,12 +19,7 @@ For applications in which an estimator is sought for many instances with the sam
 
 
 A special case of the problem occurs for multi-variate congruence equations:
-$$
-y_1  \equiv a_{11} x_1 + a_{12} x_2 + a{1n} x_n \mod b_1\\
-y_2  \equiv a_{21} x_1 + a_{22} x_2 + a{2n} x_n \mod b_2\\
-\vdots \\
-y_m \equiv a_{m1} x_1 + a_{m2} x_2 + a{mn} x_n \mod b_m
-$$
+$$ y_1  \equiv a_{11} x_1 + a_{12} x_2 + a{1n} x_n \mod b_1\\ y_2  \equiv a_{21} x_1 + a_{22} x_2 + a{2n} x_n \mod b_2\\ \vdots \\ y_m \equiv a_{m1} x_1 + a_{m2} x_2 + a{mn} x_n \mod b_m $$
 The matrix $A$ above is formed as $[a_{ij}]$;  $M$ is the diagonal matrix of rational moduli, $b_1, ..., b_m$.  The remainders, $y_1, ... , y_m$ are available only as noisy versions in the column vector, $y$. The perturbations in $y$ are assumed zero-mean Gaussian, but may have unequal variance and may be correlated.
 
 
