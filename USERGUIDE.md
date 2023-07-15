@@ -20,7 +20,7 @@ $$y_1  \equiv a_{11} x_1 + a_{12} x_2 + a_{1n} x_n \mod b_1$$
 $$y_2  \equiv a_{21} x_1 + a_{22} x_2 + a_{2n} x_n \mod b_2$$ 
 $$\vdots$$
 $$y_m \equiv a_{m1} x_1 + a_{m2} x_2 + a_{mn} x_n \mod b_m$$
-The matrix $A$ above is formed as $[a_{ij}]$;  $M$ is the diagonal matrix of rational moduli, $b_1, ..., b_m$.  The remainders, $y_1, ... , y_m$ are available only as noisy versions in the column vector, $y$. The perturbations in $y$ are assumed zero-mean Gaussian, but may have unequal variance and may be correlated.
+The matrix $A$ above is formed as $[a_{ij}]$.  $M$ is the diagonal matrix of rational moduli, $b_1, ..., b_m$.  The remainders, $y_1, ... , y_m$ are available only as noisy versions in the column vector, $y$. The perturbations in $y$ are assumed zero-mean Gaussian, but may have unequal variance and may be correlated.
 
 
 The following is an annotated list of the routines in the package.
